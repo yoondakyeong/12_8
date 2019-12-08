@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>누구일까요?</title>
+	<link rel="stylesheet" href="../MS/style.css">
+	<link rel="stylesheet" href="./onestyle.css">
+</head>
+
+	
+
+<body>
+<!--헤더 게임 이름 등 -->
+	<div id="Hheader" class="CHheader">
+
+		<div id="nameHeaderone" class="nameHeaderW">
+			<div id="SNHoneone" class="SNHright">
+				<!--누구일까요?-->
+				<img class="headerSNGame" src="../mainimg/headerNO.png">
+			</div>
+	 			<div id="SNHonetwo" class="SNHleft">
+				<!--퀴즈--><img class="headerNGame" src="../mainimg/headerNGO.png">
+			</div>
+		</div>
+
+	
+		</div>
+	</div>
+	
+<!--메뉴바 & 로고 -->
+	<div id="menu" class="Cmenu">
+		<div id="Mainlogo">
+			<a href="../index.html">
+				<img id="logoHiname" src="../mainimg/logonamee.png">
+			</a>
+		</div>
+		
+		<div class="containermain">
+      <button id="B1page" class="mainButton">
+        <a href="../GameS1/Gameone.html">
+          <img class="menuFT" src="../mainimg/Wmenuone.png">
+        </a>
+      </button>
+
+      <button id="B2page" class="mainButton">
+        <a href="../GameS2/Gametwo.html">
+          <img class="menuFT" src="../mainimg/Wmenutwo.png">
+        </a>
+      </button>
+
+      <button id="B3page" class="mainButton">
+        <a href="../GameS3/Gamethree.html">
+          <img class="menuFT" src="../mainimg/Wmenuthree.png">
+        </a>
+      </button>
+    </div>
+	</div>
+
+
+<!--메인화면 -->
+<div class="Cmain">
+     
+	<div class="quiz_wrapper">
+           
+           <div class="question" id="questionBox">
+           </div>
+           
+           <div class="options">
+           	  <ul id="ul">
+           	  	  <li id="op1" onclick="button(this)"></li>
+           	  	  <li id="op2" onclick="button(this)"></li>
+           	  	  <li id="op3" onclick="button(this)"></li>
+           	  	  <li id="op4" onclick="button(this)"></li>
+           	  </ul>
+           </div>
+
+           <div class="score">
+           	   <div class="next">
+           	   	  <button type="button" onclick="next()" id="button">다음</button>
+           	   </div>
+           	   <div class="score-card">
+           	   	  점수 : <span id="scoreCard">0</span>
+           	   </div>
+           </div>
+
+	</div>
+</div>
+
+<script>
+	   
+   	var ul=document.getElementById('ul');
+   	var btn=document.getElementById('button');
+   	var scoreCard=document.getElementById('scoreCard');
+   	var quizBox=document.getElementById('questionBox');
+  	var op1=document.getElementById('op1');
+  	var op2=document.getElementById('op2');
+  	var op3=document.getElementById('op3');
+  	var op4=document.getElementById('op4');
+
+
+      var app={
+                questions:[
+                          {q:'코끼리는 누구일까요?',
+                           options:['<img src=./G11.png height=160/>',
+                           			'<img src=./G12.png height=160/>',
+                           			'<img src=./G13.png height=160/>',
+                           			'<img src=./G14.png height=160/>'],
+                           			answer:1},
+
+                          {q:'기린은 누구일까요?',
+                          options:['<img src=./G16.png height=160/>',
+                          			'<img src=./G15.png height=160/>',
+                          			'<img src=./G12.png height=160/>',
+                          			'<img src=./G11.png height=160/>'],
+                          			answer:2},
+
+                          {q:'사자는 누구일까요?',
+                          options:['<img src=./G13.png height=160/>',
+                          			'<img src=./G14.png height=160/>',
+                          			'<img src=./G11.png height=160/>',
+                          			'<img src=./G12.png height=160/>'],
+                          			answer:4}
+                          ],
+                index:0,
+                load:function(){
+                	   if(this.index<=this.questions.length-1){
+                        quizBox.innerHTML=this.index+1+". "+this.questions[this.index].q;      
+                        op1.innerHTML=this.questions[this.index].options[0];
+                        op2.innerHTML=this.questions[this.index].options[1];
+                        op3.innerHTML=this.questions[this.index].options[2];
+                        op4.innerHTML=this.questions[this.index].options[3];
+                           this.scoreCard();
+                        }
+                        else{
+
+                        quizBox.innerHTML="게임 끝!!!"      
+                        op1.style.display="none";
+                        op2.style.display="none";
+                        op3.style.display="none";
+                        op4.style.display="none";
+                        btn.style.display="none";
+                        }
+                },
+                 next:function(){
+                    this.index++;
+                    this.load();
+                 },
+                check:function(ele){
+                   
+                         var id=ele.id.split('');
+                         
+                         if(id[id.length-1]==this.questions[this.index].answer){
+                         	this.score++;
+                         	ele.className="correct";
+                         	ele.innerHTML="정답!";
+                         	this.scoreCard();
+                         }
+                         else{
+                         	ele.className="wrong";
+                         	ele.innerHTML="오답";
+                         }
+                },
+                notClickAble:function(){
+                       for(let i=0;i<ul.children.length;i++){
+                       	    ul.children[i].style.pointerEvents="none";
+                       }
+                },
+
+                clickAble:function(){
+                       for(let i=0;i<ul.children.length;i++){
+                       	    ul.children[i].style.pointerEvents="auto";
+                       	    ul.children[i].className=''
+
+                       }
+                },
+                score:0,
+                scoreCard:function(){
+                	scoreCard.innerHTML=this.questions.length+"/"+this.score;
+                }
+ 
+           }
+
+
+           window.onload=app.load();
+
+           function button(ele){
+           	     app.check(ele);
+           	     app.notClickAble();
+           }
+
+         function  next(){
+              app.next();
+              app.clickAble();
+         } 
+
+
+</script>
+
+
+
+<!--하단 -->
+		<div class="CFootertext">
+			<div id="CopyName" class="FooterText">
+				Copyright © 안녕!동물친구들
+			</div>
+
+			<div id="DesignName" class="FooterText">
+				Designed by Yoon
+			</div>
+		</div>
+
+
+
+<script>
+			 
+		</script>
+</body>
+</html>

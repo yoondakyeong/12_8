@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="MS/style.css">
+	
+</head>
+
+	
+
+<body>
+<!--헤더 게임 이름 등 -->
+<div class="wrapp">
+<div id="Allwrap">
+	<div id="Hheader" class="CHheader">
+		<div id="MainMouse" class="SNHright">
+			<!--마우스로 동물친구들을 찾아보아요-->
+			<img class="Mainleft" src="mainimg/headerMain.png">
+			<!--땡마리-->
+			<img id="Ima0" class="Mainright" src="mainimg/text/ma0.png">
+			<img id="Ima1" class="Mainright" src="mainimg/text/ma1.png">
+			<img id="Ima2" class="Mainright" src="mainimg/text/ma2.png">
+			<img id="Ima3" class="Mainright" src="mainimg/text/ma3.png">
+			<img id="Ima4" class="Mainright" src="mainimg/text/ma4.png">
+			<img id="Ima5" class="Mainright" src="mainimg/text/ma5.png">
+			<img id="Ima6" class="Mainright" src="mainimg/text/ma6.png">
+		</div>
+	</div>
+	
+<!--메뉴바 & 로고 -->
+	<div id="menu" class="Cmenu">
+		<div id="Mainlogo">
+			<a href="./index.html">
+				<img id="logoHiname" src="./mainimg/logonamee.png">
+			</a>
+
+		</div>
+		<div class="containermain">
+			<button id="B1page" class="mainButton">
+				<a href="./GameS1/Gameone.html">
+					<img class="menuFT" src="mainimg/Wmenuone.png">
+				</a>
+			</button>
+
+			<button id="B2page" class="mainButton">
+				<a href="./GameS2/Gametwo.html">
+					<img class="menuFT" src="mainimg/Wmenutwo.png">
+				</a>
+			</button>
+
+			<button id="B3page" class="mainButton">
+				<a href="./GameS3/Gamethree.html">
+					<img class="menuFT" src="mainimg/Wmenuthree.png">
+				</a>
+			</button>
+		</div>
+	</div>
+
+
+<!--메인화면 -->
+	<div id="main" class="Cmain">
+		<!--메인화면 -->
+		<div id="Msection1" class="mainpage">
+			<img src="mainimg/BG1.png" id="mainBG1" class="mainBG"><!--메인배경 -->
+
+<!--잎 라인-->	<img src="mainimg/leaf1.png" id="mainleaf" class="mainBGI">
+			<img src="mainimg/leaf2.png" id="mainleaf2" class="mainBGI">
+<!--잎 색적용--><img src="mainimg/leaf1M.png" id="mainleafM" class="mainBGI">
+			<img src="mainimg/leaf2M.png" id="mainleaf2M" class="mainBGI">
+			
+			<img src="mainimg/tree1.png" id="maintree" class="mainBGI">
+			<img src="mainimg/tree2.png" id="maintree2" class="mainBGI">
+
+			<!--누르면동물들나오기-->
+			<!--라인-->
+			<img src="mainimg/BGI1.png" id="mainBGI1" class="MBI1"><!--동글풀 사자-->
+			<img src="mainimg/BGI2.png" id="mainBGI2" class="MBI2"><!--이상한나무 호랑이-->
+			<img src="mainimg/BGI3.png" id="mainBGI3" class="MBI3"><!--세모 뱀-->
+			<img src="mainimg/BGI4.png" id="mainBGI4" class="MBI4"><!--풀 기린-->
+			<img src="mainimg/BGI5.png" id="mainBGI5" class="MBI5"><!--오른쪽 풀 코끼리-->
+			<img src="mainimg/BGI6.png" id="mainBGI6" class="MBI6"><!--나무 원숭이-->
+			<!--라인 색-->
+			<img src="mainimg/BGI11.png" id="mainBGI11" class="MBI1 MBIG"><!--동글풀 사자-->
+			<img src="mainimg/BGI22.png" id="mainBGI22" class="MBI2 MBIG"><!--이상한나무호랑이-->
+			<img src="mainimg/BGI33.png" id="mainBGI33" class="MBI3 MBIG"><!--세모 뱀-->
+			<img src="mainimg/BGI44.png" id="mainBGI44" class="MBI4 MBIG"><!--풀 기린-->
+			<img src="mainimg/BGI55.png" id="mainBGI55" class="MBI5 MBIG"><!--오른쪽풀 코끼리-->
+			<img src="mainimg/BGI66.png" id="mainBGI66" class="MBI6 MBIG"><!--나무원숭이-->
+
+			<img src="mainimg/IEleph.png" id="ImgIEleph" class="IA">
+			<img src="mainimg/IG.png" id="ImgIG" class="IA">
+			<img src="mainimg/ILion.png" id="ImgILion" class="IA">
+			<img src="mainimg/IMonk.png" id="ImgIMonk" class="IA">
+			<img src="mainimg/IS.png" id="ImgIS" class="IA">
+			<img src="mainimg/ITiger.png" id="ImgITiger" class="IA">
+			<script>
+				var aniCount = 6
+//마우스오버리브 사용하기
+				mainBGI1.addEventListener("mouseover",function(){
+					mainBGI11.style.opacity = "1"
+				})
+				mainBGI1.addEventListener("mouseleave",function(){
+					mainBGI11.style.opacity = "0"
+				})
+
+				mainBGI2.addEventListener("mouseover",function(){
+					mainBGI22.style.opacity = "1"
+				})
+				mainBGI2.addEventListener("mouseleave",function(){
+					mainBGI22.style.opacity = "0"
+				})
+
+				mainBGI3.addEventListener("mouseover",function(){
+					mainBGI33.style.opacity = "1"
+				})
+				mainBGI3.addEventListener("mouseleave",function(){
+					mainBGI33.style.opacity = "0"
+				})
+
+				mainBGI4.addEventListener("mouseover",function(){
+					mainBGI44.style.opacity = "1"
+				})
+				mainBGI4.addEventListener("mouseleave",function(){
+					mainBGI44.style.opacity = "0"
+				})
+
+				mainBGI5.addEventListener("mouseover",function(){
+					mainBGI55.style.opacity = "1"
+				})
+				mainBGI5.addEventListener("mouseleave",function(){
+					mainBGI55.style.opacity = "0"
+				})
+
+				mainBGI6.addEventListener("mouseover",function(){
+					mainBGI66.style.opacity = "1"
+				})
+				mainBGI6.addEventListener("mouseleave",function(){
+					mainBGI66.style.opacity = "0"
+				})
+
+
+//동물보이게하기
+				var state="off"
+				mainBGI1.onclick = function(){
+					if(state =="off"){
+					ImgILion.style.opacity="1";
+					state = "on";
+					aniCount--
+				}else{
+					ImgILion.style.opacity="0";
+					state = "off";
+					aniCount++
+				}
+				}
+
+				var state1="off"
+				mainBGI2.onclick = function(){
+					if(state1 =="off"){
+					ImgITiger.style.opacity="1";
+					state1 = "on";
+					aniCount--
+				}else{
+					ImgITiger.style.opacity="0";
+					state1 = "off";
+					aniCount++}
+				}
+
+				var state2="off"
+				mainBGI3.onclick = function(){
+					if(state2 =="off"){
+					ImgIS.style.opacity="1";
+					state2 = "on";
+					aniCount--
+				}else{
+					ImgIS.style.opacity="0";
+					state2 = "off";
+					aniCount++}
+				}
+
+				var state3="off"
+				mainBGI4.onclick = function(){
+					if(state3 =="off"){
+					ImgIG.style.opacity="1";
+					state3 = "on";
+					aniCount--
+				}else{
+					ImgIG.style.opacity="0";
+					state3 = "off";
+					aniCount++}
+				}
+
+				var state4="off"
+				mainBGI5.onclick = function(){
+					if(state4 =="off"){
+					ImgIEleph.style.opacity="1";
+					state4 = "on";
+					aniCount--
+				}else{
+					ImgIEleph.style.opacity="0";
+					state4 = "off";
+					aniCount++}
+				}
+
+				var state5="off"
+				mainBGI6.onclick = function(){
+					if(state5 =="off"){
+					ImgIMonk.style.opacity="1";
+					state5 = "on";
+					aniCount--
+				}else{
+					ImgIMonk.style.opacity="0";
+					state5 = "off";
+					aniCount++}
+				}
+
+				Ima6.style.opacity = 1
+				window.addEventListener("click",function(e){
+
+					if(aniCount == 6){
+						Ima0.style.opacity = 0
+						Ima1.style.opacity = 0
+						Ima2.style.opacity = 0
+						Ima3.style.opacity = 0
+						Ima4.style.opacity = 0
+						Ima5.style.opacity = 0
+						Ima6.style.opacity = 0
+
+						Ima6.style.opacity = 1
+					}
+					if(aniCount == 5) {
+						Ima0.style.opacity = 0
+						Ima1.style.opacity = 0
+						Ima2.style.opacity = 0
+						Ima3.style.opacity = 0
+						Ima4.style.opacity = 0
+						Ima5.style.opacity = 0
+						Ima6.style.opacity = 0
+
+						Ima5.style.opacity = 1
+					}
+					if(aniCount == 4) {
+						Ima0.style.opacity = 0
+						Ima1.style.opacity = 0
+						Ima2.style.opacity = 0
+						Ima3.style.opacity = 0
+						Ima4.style.opacity = 0
+						Ima5.style.opacity = 0
+						Ima6.style.opacity = 0
+
+						Ima4.style.opacity = 1
+					}
+					if(aniCount == 3) {
+						Ima0.style.opacity = 0
+						Ima1.style.opacity = 0
+						Ima2.style.opacity = 0
+						Ima3.style.opacity = 0
+						Ima4.style.opacity = 0
+						Ima5.style.opacity = 0
+						Ima6.style.opacity = 0
+
+						Ima3.style.opacity = 1
+					}
+					if(aniCount == 2) {
+						Ima0.style.opacity = 0
+						Ima1.style.opacity = 0
+						Ima2.style.opacity = 0
+						Ima3.style.opacity = 0
+						Ima4.style.opacity = 0
+						Ima5.style.opacity = 0
+						Ima6.style.opacity = 0
+
+						Ima2.style.opacity = 1
+					}
+					if(aniCount == 1) {
+						Ima0.style.opacity = 0
+						Ima1.style.opacity = 0
+						Ima2.style.opacity = 0
+						Ima3.style.opacity = 0
+						Ima4.style.opacity = 0
+						Ima5.style.opacity = 0
+						Ima6.style.opacity = 0
+
+						Ima1.style.opacity = 1
+					}
+					if(aniCount == 0) {
+						Ima0.style.opacity = 0
+						Ima1.style.opacity = 0
+						Ima2.style.opacity = 0
+						Ima3.style.opacity = 0
+						Ima4.style.opacity = 0
+						Ima5.style.opacity = 0
+						Ima6.style.opacity = 0
+
+						Ima0.style.opacity = 1
+					}
+				})
+			</script>
+		</div>
+		
+	</div>
+
+
+<!--하단 -->
+		<div class="CFootertext">
+			<div id="CopyName" class="FooterText">
+				Copyright © 안녕!동물친구들
+			</div>
+
+			<div id="DesignName" class="FooterText">
+				Designed by Yoon
+			</div>
+		</div>
+
+
+<!--
+	<script>
+		//페이지비율
+	
+		mainBG1.style.height = mainBG1.offsetWidth*1843/3685 +"px"
+		menu.style.height = Hheader.offsetHeight + mainBG1.offsetWidth*1843/3685 +"px"
+		window.addEventListener("resize",function(e){
+			mainBG1.style.height = mainBG1.offsetWidth*1843/3685 +"px"
+		menu.style.height = Hheader.offsetHeight + mainBG1.offsetWidth*1843/3685 +"px"
+		})
+
+	</script>
+-->
+</div>
+</div>
+</body>
+</html>

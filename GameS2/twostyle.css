@@ -1,0 +1,73 @@
+
+
+#game2wrap{
+  margin-top: 4vw;
+}
+
+.width500px{
+          width: 1000px; 
+          display: inline-block;
+        }
+        .center{
+          text-align: center;
+        }
+      
+        #menuTable{ 
+      font-size: 1.3em; 
+        }
+
+        .alignRight{ 
+          position: absolute;
+          padding: 10px;
+          font-size: 1em;
+            
+        }
+        #startBtn{
+          border: none; 
+          color: black; 
+          background-color: white; 
+          width: 118px;
+          padding: 7px; 
+          font-size: 22px;  
+          margin-bottom: 10px; 
+            border-radius: 10px;
+        }
+        #cardTable{
+          border-collapse: collapse;
+            margin-top: 16px;
+        }
+        #cardTable td{
+          border: 2px solid black; 
+          width: 165px; 
+            height: 165px; 
+          text-align: center;
+        }
+        #cardTable td img{
+          max-width: 100%;
+            top:50%;
+            border-radius:10px;
+            
+        }
+        #cardTable td span{
+          font-size: 25pt; 
+          font-weight: bold; 
+          color: black; 
+          display: none;
+        }
+        #countDown{
+          background-color: white;
+            border: 2px solid black;  
+          color: black; 
+          font-size: 1.5em; 
+          font-weight: bold;
+          padding: 5px;
+            border-radius: 10px;
+        }
+        #info{
+            width: 100%; 
+          height: 100%; 
+          background-color: black; 
+          color: white; 
+          padding-top: 100px;
+            padding-bottom: 100px;
+            }

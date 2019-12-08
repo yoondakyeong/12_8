@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>생김새가달라?!</title>
+	<link rel="stylesheet" href="../MS/style.css">
+	<link rel="stylesheet" href="./threestyle.css">
+</head>
+
+	
+
+<body>
+<!--헤더 게임 이름 등 -->
+	<div id="Hheader" class="CHheader">
+
+		<div id="nameHeaderthree" class="nameHeaderW">
+			<div id="SNHthreeone" class="SNHright">
+				<!--생김새가달라?!-->
+				<img class="headerSNGame" src="../mainimg/headerNOTh.png">
+			</div>
+			<div id="SNHthreetwo" class="SNHleft">
+				<!--다른그림찾기-->
+				<img class="headerNGame" src="../mainimg/headerNGTh.png">
+			</div>
+		</div>
+	</div>
+	
+<!--메뉴바 & 로고 -->
+	<div id="menu" class="Cmenu">
+		<div id="Mainlogo">
+			<a href="../index.html">
+				<img id="logoHiname" src="../mainimg/logonamee.png">
+			</a>
+		</div>
+		
+		<div class="containermain">
+      <button id="B1page" class="mainButton">
+        <a href="../GameS1/Gameone.html">
+          <img class="menuFT" src="../mainimg/Wmenuone.png">
+        </a>
+      </button>
+
+      <button id="B2page" class="mainButton">
+        <a href="../GameS2/Gametwo.html">
+          <img class="menuFT" src="../mainimg/Wmenutwo.png">
+        </a>
+      </button>
+
+      <button id="B3page" class="mainButton">
+        <a href="../GameS3/Gamethree.html">
+          <img class="menuFT" src="../mainimg/Wmenuthree.png">
+        </a>
+			</button>
+		</div>
+	</div>
+
+
+<!--메인화면 -->
+		<div id="TrdMain" class="Cmain">
+			<div onclick="imgboard()" class="imgwrap">
+
+					<div id="allinformW">
+						<h2 class="allinform" style="left:0;">
+							찾은 개수 : 
+							<span id="finding">0</span>
+						</h2>
+						<h2 class="allinform" style="right:0;">
+							남은 기회 : 
+							<span id="chance">3</span>
+						</h2>
+					</div>
+
+					<div id="imgboard2" class="imgwrap2">
+					</div>
+					<img src="three1IMG.png">
+
+					<div id="allclick">
+						<div onclick="hitclick1()" id="hitbox1" class="hitbox hitbox1">●</div>
+						<div onclick="hitclick2()" id="hitbox2" class="	hitbox hitbox2">●</div>
+						<div onclick="hitclick3()" id="hitbox3" class="hitbox hitbox3">●</div>
+					</div>
+					<div id=explain>***오른쪽에서 다른그림을 찾아보세요!!!</div>
+
+					<p id="description">
+						<span id="result"></span> <br>
+						<span id="reset"></span>
+					</p>
+
+			</div>
+		</div>
+
+		<script>
+			var a=0;
+			a++;
+			var b=3;
+			b--;
+
+			function hitclick1(){
+				hitbox1.style.opacity= 0.6;
+				finding.innerHTML = a++;
+				chance.innerHTML = b++;
+				if (a>3){
+					result.innerHTML = "다 찾았다!!";
+					reset.innerHTML = "<button class=blue001 onclick=repeat()>다시시작</button>";
+					result.style.opacity = 1;
+					imgboard2.style.opacity = 1;
+					allclick.style.display = "none";
+					allinformW.style.display = "none";
+				}
+			}
+
+			function hitclick2(){
+				hitbox2.style.opacity=0.6;
+				finding.innerHTML = a++;
+				chance.innerHTML = b++;
+				if (a>3){
+					result.innerHTML = "다 찾았다!!";
+					reset.innerHTML = "<button class=blue001 onclick=repeat()>다시시작</button>";
+					result.style.opacity = 1;
+					imgboard2.style.opacity = 1;
+					allclick.style.display = "none";
+					allinformW.style.display = "none";
+				}
+			}
+
+			function hitclick3(){
+				hitbox3.style.opacity=0.6;
+				finding.innerHTML = a++;
+				chance.innerHTML = b++;
+				if (a>3){
+					result.innerHTML = "다 찾았다!!";
+					reset.innerHTML = "<button class=blue001 onclick=repeat()>다시시작</button>";
+					result.style.opacity = 1;
+					imgboard2.style.opacity = 1;
+					allclick.style.display = "none";
+					allinformW.style.display = "none";
+				}
+			}
+
+			function imgboard(){
+				chance.innerHTML = b--;
+				if (b<0){
+					result.innerHTML = "못 찾았어요..";
+					reset.innerHTML = "<button class=blue001 onclick=repeat()>다시시작</button>";
+					result.style.opacity = 1;
+					imgboard2.style.opacity = 1;
+					allclick.style.display = "none";
+					allinformW.style.display = "none";
+				}
+			}
+
+			function repeat(){
+				location.reload();
+			}
+		</script>
+
+<!--하단 -->
+		<div class="CFootertext">
+			<div id="CopyName" class="FooterText">
+				Copyright © 안녕!동물친구들
+			</div>
+
+			<div id="DesignName" class="FooterText">
+				Designed by Yoon
+			</div>
+		</div>
+
+</body>
+</html>

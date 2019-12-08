@@ -1,0 +1,389 @@
+
+
+
+		div{box-sizing: border-box}
+
+		*{text-align: center;
+		  margin: 0;
+		  padding: 0;
+		}
+
+		html, body{
+			width:100vw;
+			 overflow-x: hidden;
+			}
+
+
+		#logoHiname{
+			padding-top: 25px;
+			width: 75%;
+			cursor: pointer;
+		}
+		#logoHiname:hover{
+			animation : shake 0.5s;
+			animation-iteration-count: infinite;
+		}
+
+		.CHheader{
+			position: relative;
+			display: inline-block;
+			width: 80vw;
+			height:5vw;
+			background-color: white;
+			border-bottom: 2px solid black;
+			float: right;
+			z-index: 10;
+
+		}
+		.Cmenu{
+			position: relative;
+			width: 20vw;
+			height: 53vw;
+			background-color: white;
+			float: left;
+			z-index: 10;
+			border-right:2px solid black;
+
+		}
+		.Cmain{
+			position: relative;
+			width: 80%;
+			float: left;
+
+		}
+		.CFootertext{
+			position: relative;
+			width: 100%;
+			height: 30px;
+			bottom: 0;
+			background-color: white;
+			float: left;
+			border-top: 2px solid black;
+			z-index: 1;
+		}
+
+/**메뉴 버튼 꾸미기**/
+		.containermain{
+			width:220px;
+			position: relative;
+			padding:65px 0;
+			filter:url(#goo);
+			left:50%;
+			transform:translateX(-50%);
+		}
+
+		.mainButton{
+			background:black;
+			color: inherit;
+			border:none;
+			padding: 0;
+			font:inherit;
+			cursor: pointer;
+			outline: inherit;
+
+			width:183px;
+			height: 61px;
+			position: relative;
+			margin-bottom: 70px;
+			transition: .5s;
+			border-radius: 15px;
+		}
+
+		.mainButton span{ display: block;
+			width: 20px;
+			height: 100%;
+			top:50%;
+			transform: translate(0,-50%);
+			position: absolute;
+			background-color: black;
+			transition: .7s cubic-bezier(0,2,.7,2); }
+
+		.mainButton:hover span{
+			height: 120%;
+			transition: .4s cubic-bezier(.1,1,.2,4);; 
+		}
+/*버튼들*/
+		.mainButton span:nth-Child(1){
+			transition-delay: .2s;
+			left:0;
+		}
+
+		.mainButton span:nth-Child(2){
+			transition-delay: .15s;
+			left:20px;
+		}
+
+		.mainButton span:nth-Child(3){
+			transition-delay: .1s;
+			left:40px;
+		}
+
+		.mainButton span:nth-Child(4){
+			transition-delay: .05s;
+			left:60px;
+		}
+
+		.mainButton span:nth-Child(5){
+			transition-delay: .0s;
+			left:80px;
+		}
+
+		.mainButton span:nth-Child(6){
+			transition-delay: .05s;
+			left:100px;
+		}
+
+		.mainButton span:nth-Child(7){
+			transition-delay: .1s;
+			left:120px;
+		}
+		.mainButton span:nth-Child(8){
+			transition-delay: .15s;
+			left:140px;
+		}
+		.mainButton span:nth-Child(9){
+			transition-delay: .2s;
+			left:160px;
+		}
+		.mainButton span:nth-Child(10){
+			transition-delay: .25s;
+			left:180px;
+		}
+	
+
+		.menuFT{
+			width: 100%;
+			z-index: 10;
+			position: relative;
+		}
+
+		.mainButton:hover .menuFT{
+			opacity: 0.5;
+		}
+
+		#CopyName{
+			position: absolute;
+			right: 3%;
+		}
+
+		#DesignName{
+			position: absolute;
+			left:3%;
+		}
+
+/**헤더 게임 이름 등 스타일 **/
+		.nameHeaderW{
+			position: relative;
+		}
+
+		.Mainleft{
+			position:absolute;
+			left:3%;
+			width: 50%;
+		}
+		.Mainright{
+			position:absolute;
+			right:3%;
+			width: 50%;
+			opacity: 0;
+		}
+		.SNHright{
+			position:relative;
+		}
+		.SNHleft{
+			position:relative;
+		}
+		.headerNGame{
+			position:absolute;
+			left:3%;
+			width: 20%;
+			transform: translate(-50%,auto);
+		}
+		.headerSNGame{
+			position:absolute;
+			right:3%;
+			width: 20%;
+		}
+
+/**메인 이미지 section1**/
+		#main #Msection1{
+			position: relative;
+			height: 100%;
+		}
+		#main #Msection1 #mainBG1{
+			position: relative;
+			width: 99%;
+		}
+		
+		#main #Msection1 .MBI1{
+			position: absolute;
+			width: 19%;
+    		top: 67%;
+    		height: auto;
+    		left: -2%;
+    		cursor: pointer;
+		}
+		#main #Msection1 .MBI2{
+			position: absolute;
+			width: 12%;
+    		top: 37%;
+    		height: auto;
+    		left: 20%;
+    		cursor: pointer;
+		}
+		#main #Msection1 .MBI3{
+			position: absolute;
+			width: 7%;
+    		top: 27%;
+    		height: auto;
+   		 	left: 45%;
+    		cursor: pointer;
+		}
+		#main #Msection1 .MBI4{
+			position: absolute;
+			width: 10%;
+    		top: 56.5%;
+    		height: auto;
+    		left: 48%;
+    		cursor: pointer;
+		}
+		#main #Msection1 .MBI5{
+			position: absolute;
+			width: 20%;
+			height: auto;
+   	 		bottom: 3%;
+    		right: 1%;
+    		cursor: pointer;
+		}
+		#main #Msection1 .MBI6{
+			position: absolute;
+			width: 18%;
+    		top: 14%;
+    		height: auto;
+    		right: 9%;
+    		cursor: pointer;
+    		z-index: 10;
+		}
+/**hover이용 색바꾸기**/
+		#main #Msection1 #mainleaf{
+			position: absolute;
+			width: 20%;
+    		top: 3%;
+    		height: auto;
+    		left: -35px;
+		}
+
+		#mainleafM{
+			position: absolute;
+			width: 20%;
+    		top: 3%;
+    		height: auto;
+    		left: -35px;
+    		opacity: 0;
+    		pointer-events: none;
+		}
+
+		#main #Msection1 #mainleaf2{
+			position: absolute;
+			width: 15%;
+    		top: 39%;
+    		height: auto;
+    		left: -41px;
+		}
+		#main #Msection1 #mainleaf2M{
+			position: absolute;
+			width: 15%;
+    		top: 39%;
+    		height: auto;
+    		left: -41px;
+    		opacity: 0;
+    		pointer-events: none;
+		}
+
+		#main #Msection1 #maintree{
+			position: absolute;
+			width: 24%;
+   		 	top: 5.5%;
+   		 	height: auto;
+    		right: -27px;
+		}
+		#main #Msection1 #maintree2{
+			position: absolute;
+			width: 56%;
+			height: auto;
+    		top: -5%;
+    		right: -48px;
+		}
+		.MBIG{
+			pointer-events: none;
+			opacity: 0;
+		}
+/**동물들**/
+		#ImgIEleph{
+			position: absolute;
+			width: 25%;
+    		top: 51%;
+    		right: 74%;
+    		height: auto;
+    		pointer-events: none;
+    		opacity: 0;
+		}
+		#ImgIG{
+			position: absolute;
+			width: 13%;
+    		top: 12%;
+    		height: auto;
+    		left: 6%;
+    		pointer-events: none;
+    		opacity: 0;
+		}
+		#ImgILion{
+			position: absolute;
+			width: 15%;
+			top: 22%;
+			height: auto;
+    		right: 54%;
+    		pointer-events: none;
+    		opacity: 0;
+		}
+		#ImgIMonk{
+			position: absolute;
+			width: 15%;
+			top: 0%;
+			height: auto;
+    		right: 12%;
+    		pointer-events: none;
+    		opacity: 0;
+		}
+		#ImgIS{
+			position: absolute;
+			width: 15%;
+			height: auto;
+			bottom:2%;
+    		right: 24%;
+    		pointer-events: none;
+    		opacity: 0;
+		}
+		#ImgITiger{
+			position: absolute;
+			width: 15%;
+			height: auto;
+			top: 45%;
+    		right: 31%;
+    		pointer-events: none;
+    		opacity: 0;
+		}
+
+
+
+/**게임화면들**/
+
+
+
+/**키프레임 메인로고**/
+@keyframes shake {
+  20% { transform: translate(0px, 0px) rotate(6deg); }
+  40% { transform: translate(1px, -1px) rotate(-10deg); }
+  80% { transform: translate(-1px, -1px) rotate(20deg); }
+  100% { transform: translate(1px, -2px) rotate(-10deg); }
+}
